@@ -1,7 +1,7 @@
 testx-file-keywords
 =====
 
-A library that extends testx with keywords for content of text files. This library is packaged as a npm package
+A library that extends testx with keywords for content of text files. This library is packaged as a npm package.
 
 ## How does it work
 From the directory of the art code install the package as follows:
