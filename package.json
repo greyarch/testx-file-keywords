@@ -1,12 +1,13 @@
 {
   "name": "testx-file-keywords",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Keywords to test text file content using the testx library.",
   "main": "index.coffee",
   "dependencies": {
     "coffee-errors": "^0.8.6",
     "coffee-script": "^1.9.2",
-    "download": "^4.2.0",
+    "download-file": "^0.1.5",
+    "files": "^0.8.2",
     "lodash": "^3.8.0",
     "q": "^1.4.1",
     "temp": "^0.8.3"

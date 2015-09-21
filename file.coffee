@@ -1,6 +1,6 @@
 q = require 'q'
-Download = require 'download'
-temp = require("temp").track()
+download = require 'download-file'
+temp = require('temp').track()
 path = require 'path'
 fs = require 'fs'
 
@@ -10,13 +10,11 @@ module.exports =
     filePath = temp.path
       prefix: 'testx-'
     options =
-      mode: '755'
-      dest: path.dirname(filePath)
-    new Download(options)
-    .get(url)
-    .run (err, files) ->
+      directory: path.dirname(filePath)
+      filename: path.basename(filePath)
+    download url, options, (err) ->
       deferred.reject(err) if err
-      deferred.resolve files[0]
+      deferred.resolve filePath
     deferred.promise
 
   getText: (file) ->
