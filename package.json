@@ -1,0 +1,28 @@
+{
+  "name": "testx-csv-keywords",
+  "version": "0.1.0",
+  "description": "Keywords to test csv files using the testx library.",
+  "main": "index.coffee",
+  "dependencies": {
+    "coffee-errors": "^0.8.6",
+    "coffee-script": "^1.9.2",
+    "download": "^4.2.0",
+    "lodash": "^3.8.0",
+    "q": "^1.4.1",
+    "temp": "^0.8.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/greyarch/testx-csv-keywords.git"
+  },
+  "keywords": [
+    "csv",
+    "test",
+    "testx"
+  ],
+  "author": "Greyarch BV",
+  "license": "ISC"
+}
