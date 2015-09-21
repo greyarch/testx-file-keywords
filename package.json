@@ -7,7 +7,6 @@
     "coffee-errors": "^0.8.6",
     "coffee-script": "^1.9.2",
     "download-file": "^0.1.5",
-    "files": "^0.8.2",
     "lodash": "^3.8.0",
     "q": "^1.4.1",
     "temp": "^0.8.3"
