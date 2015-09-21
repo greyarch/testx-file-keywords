@@ -21,7 +21,7 @@ module.exports =
 
   getText: (file) ->
     deferred = q.defer()
-    fs.readFile filename, "utf8", (err, data) ->
+    fs.readFile file, "utf8", (err, data) ->
       deferred.reject err if err
       deferred.resolve data
     deferred.promise
