@@ -1,6 +1,6 @@
 {
   "name": "testx-file-keywords",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Keywords to test text file content using the testx library.",
   "main": "index.coffee",
   "dependencies": {

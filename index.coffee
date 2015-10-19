@@ -9,7 +9,8 @@ expectText = (matcher) ->
       file.getText(args.file)
       .then(matcher expecteds)
     else if args.url
-      file.download(args.url)
+      url = if args.url.match(/^https?:\/\//i) then args.url else browser?.baseUrl + args.url
+      file.download(url)
       .then(file.getText)
       .then(matcher expecteds)
     else if args.link
