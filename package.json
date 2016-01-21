@@ -1,13 +1,15 @@
 {
   "name": "testx-file-keywords",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Keywords to test text file content using the testx library.",
   "main": "index.coffee",
   "dependencies": {
     "coffee-errors": "^0.8.6",
     "coffee-script": "^1.9.2",
     "lodash": "^3.8.0",
+    "pdf-text": "^0.4.0",
     "q": "^1.4.1",
+    "request": "^2.67.0",
     "temp": "^0.8.3"
   },
   "scripts": {
@@ -18,11 +20,12 @@
     "url": "http://www.github.com/greyarch/testx-file-keywords.git"
   },
   "keywords": [
-    "file",
-    "text",
-    "content",
+    "testx",
     "test",
-    "testx"
+    "file",
+    "pdf",
+    "text",
+    "content"
   ],
   "author": "Greyarch BV",
   "license": "ISC"

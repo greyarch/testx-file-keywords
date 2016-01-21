@@ -24,10 +24,19 @@ testx.keywords.add(require('testx-file-keywords'))
 
 | Keyword                | Argument name | Argument value  | Description | Supports repeating arguments |
 | ---------------------- | ------------- | --------------- |------------ | ---------------------------- |
-| check text in file     |               |                 | check that the expected regex matches the text in the file |  |
+| check text in file     |               |                 | check that the expected regex matches the text in the (text) file |  |
 |                        | file          | full path to the file |one of **file**, **url** or **link** has to be specified| No |
 |                        | url           | URL of the file |one of **file**, **url** or **link** has to be specified| No |
 |                        | link          | link to the pdf file |one of **file**, **url** or **link** has to be specified| No |
 |                        | timeout       | timeout in milliseconds to wait for the link to the file to appear on the screen; ignored if the keyword is used with **file** or **url**;  parameters; defaults to 5000 if not present || No |
 |                        | expect1(2, 3...) | expected regular expression to match the text in the file || Yes |
 | check text not in file |               |                 | same as **check text in file**, but checks that the specified regex DOES NOT match |  |
+| check in pdf      |               |                 | check that the expected regex matches the text in the PDF file |  |
+|                        | file           | full path to the pdf file; one of **file**, **url** or **link** has to be specified || No |
+|                        | url           | URL of the pdf file; one of **file**, **url** or **link** has to be specified || No |
+|                        | link           | link to the pdf file; one of **file**, **url** or **link** has to be specified || No |
+|                        | timeout        | timeout in milliseconds to wait for the link to the PDF to appear on the screen; ignored if the keyword is used with **file** or **url**;  parameters; defaults to 5000 if not present || No |
+|                        | expect1(2, 3...) | expected regular expression to match the text in the pdf || Yes |
+| check not in pdf  |               |                 | same as **check in pdf**, but checks that the specified regex DOES NOT match |  |
+| check text in pdf      |               |                 | alias for **check in pdf** ||
+| check text not in pdf      |               |                 | alias for **check not in pdf** |||
