@@ -1,20 +1,21 @@
-q = require 'q'
-download = require 'download-file'
-temp = require('temp').track()
 path = require 'path'
 fs = require 'fs'
+http = require 'http'
+q = require 'q'
+temp = require("temp").track()
 
 module.exports =
   download: (url) ->
     deferred = q.defer()
-    filePath = temp.path
+    dest = temp.path
       prefix: 'testx-'
-    options =
-      directory: path.dirname(filePath)
-      filename: path.basename(filePath)
-    download url, options, (err) ->
-      deferred.reject(err) if err
-      deferred.resolve filePath
+    file = fs.createWriteStream(dest)
+    http.get url, (response) ->
+      response.pipe file
+      file.on 'finish', ->
+        file.close()
+        deferred.resolve dest
+    .on 'error', (err) -> deferred.reject err
     deferred.promise
 
   getText: (file) ->
